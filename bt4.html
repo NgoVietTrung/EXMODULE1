@@ -9,29 +9,40 @@
 <body>
 </body>
 <script>
-    class Staff{
-        constructor(fullname,email){
-            this.fullname=fullname;
-            this.email=email;   
-        }
-    }
-    
-    function setFullname(fullname){
-        this.fullname=fullname;
-    }
-    function getfullname(){
-        return this.fullname;
-    }
-    function setEmail(email){
-        this.email=email;
-    }
-    function getEmail(){
-        return this.email;
-    }
-    function toString(){
-        return `${fullname} có tên địa chỉ email là ${email}`
-    }
-    let staff= new Staff("David","david@gmail.com");
-    document.write(staff.setfullname())
+      class Staff {
+            constructor(fullname, email) {
+                this.fullname = fullname;
+                this.email = email;
+            }
+            getEmail = function () {
+                return this.email;
+            }
+            getFullname = function () {
+                return this.fullname;
+            }
+            setFullname = function (value) {
+                return this.fullname = value;
+            };
+            setEmail = function (value) {
+                return this.email = value;
+            };
+
+            toString = function () {
+                return `Fullname: ${this.fullname}<br>Email: ${this.email}<br>`;
+            };
+        };
+        let david = new Staff("David", "david@gmail.com");
+        david.setFullname("David Do");
+        david.setEmail("david.do@gmail.com");
+        document.write(david.toString());
+        const staffs = [
+            david,
+            new Staff("Tien", "Tien@gmail.com;"),
+            new Staff("Luong", "Luong@gmail.com"),
+            new Staff("Quy", "Quy@gmail.com"),
+        ];
+        for (let i = 0; i < staffs.length; i++) {
+            document.write(staffs[i].toString());
+        };
 </script>
 </html>
