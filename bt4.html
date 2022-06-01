@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 4</title>
+</head>
+<body>
+</body>
+<script>
+    class Staff{
+        constructor(fullname,email){
+            this.fullname=fullname;
+            this.email=email;   
+        }
+    }
+    
+    function setFullname(fullname){
+        this.fullname=fullname;
+    }
+    function getfullname(){
+        return this.fullname;
+    }
+    function setEmail(email){
+        this.email=email;
+    }
+    function getEmail(){
+        return this.email;
+    }
+    function toString(){
+        return `${fullname} có tên địa chỉ email là ${email}`
+    }
+    let staff= new Staff("David","david@gmail.com");
+    document.write(staff.setfullname())
+</script>
+</html>
